@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Shield, ChevronRight, Lock, Server, Wifi } from 'lucide-react';
+
+const features = [
+  {
+    icon: Lock,
+    title: "Advanced Threat Protection",
+    description: "Real-time monitoring and AI-powered threat detection to keep your systems secure."
+  },
+  {
+    icon: Server,
+    title: "Cloud Security",
+    description: "Secure your cloud infrastructure with our enterprise-grade protection."
+  },
+  {
+    icon: Wifi,
+    title: "Network Security",
+    description: "Complete network protection with advanced firewall and intrusion detection."
+  }
+];
+---
+
+<Layout title="CyberShield - Enterprise Cybersecurity Solutions">
+  <main class="min-h-screen bg-orange-50">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-orange-700 to-orange-500 text-white py-20">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-5xl font-bold mb-6">Secure Your Digital Future</h1>
+            <p class="text-xl mb-8">Protect your business with enterprise-grade cybersecurity solutions that keep threats at bay.</p>
+            <button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center">
+              Get Started <ChevronRight className="ml-2" size={20} />
+            </button>
+          </div>
+          <div class="md:w-1/2 flex justify-center">
+            <Shield className="w-64 h-64 text-orange-200 opacity-80" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">Comprehensive Security Solutions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {features.map(feature => (
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div class="mb-4">
+                <feature.icon className="w-12 h-12 text-orange-600" />
+              </div>
+              <h3 class="text-xl font-semibold mb-3">{feature.title}</h3>
+              <p class="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-orange-700 text-white py-16">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <div class="text-4xl font-bold mb-2">99.9%</div>
+            <div class="text-orange-200">Threat Detection Rate</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold mb-2">24/7</div>
+            <div class="text-orange-200">Security Monitoring</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold mb-2">5000+</div>
+            <div class="text-orange-200">Protected Companies</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

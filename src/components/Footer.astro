@@ -1,0 +1,59 @@
+---
+import { Shield, Mail, Phone, MapPin } from 'lucide-react';
+---
+
+<footer class="bg-gray-900 text-white">
+  <div class="container mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center mb-4">
+          <Shield className="h-8 w-8 text-blue-400" />
+          <span class="ml-3 text-xl font-bold">CyberShield</span>
+        </div>
+        <p class="text-gray-400">Protecting your digital assets with next-generation cybersecurity solutions.</p>
+      </div>
+      
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="text-gray-400 hover:text-white">Home</a></li>
+          <li><a href="/about" class="text-gray-400 hover:text-white">About</a></li>
+          <li><a href="/products" class="text-gray-400 hover:text-white">Products</a></li>
+          <li><a href="/contact" class="text-gray-400 hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Products</h3>
+        <ul class="space-y-2">
+          <li><a href="/products#endpoint" class="text-gray-400 hover:text-white">Endpoint Protection</a></li>
+          <li><a href="/products#network" class="text-gray-400 hover:text-white">Network Security</a></li>
+          <li><a href="/products#cloud" class="text-gray-400 hover:text-white">Cloud Security</a></li>
+          <li><a href="/products#threat" class="text-gray-400 hover:text-white">Threat Intelligence</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center">
+            <Mail className="h-5 w-5 mr-2 text-blue-400" />
+            <span class="text-gray-400">contact@cybershield.com</span>
+          </li>
+          <li class="flex items-center">
+            <Phone className="h-5 w-5 mr-2 text-blue-400" />
+            <span class="text-gray-400">+1 (555) 123-4567</span>
+          </li>
+          <li class="flex items-center">
+            <MapPin className="h-5 w-5 mr-2 text-blue-400" />
+            <span class="text-gray-400">123 Security St, Cyber City</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+      <p>&copy; 2024 CyberShield. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
